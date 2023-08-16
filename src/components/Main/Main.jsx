@@ -1,7 +1,7 @@
 import React from 'react';
 import Promo from './Promo/Promo';
 import Header from '../Header/Header';
-import AboutMe from './AboutMe/AboutMe';
+import AboutProject from './AboutProject/AboutProject';
 import Student from '../Student/Student';
 import Techs from './Techs/Techs';
 
@@ -10,7 +10,7 @@ const Main = () => {
     <main>
       <Header />
       <Promo />
-      <AboutMe />
+      <AboutProject />
       <Techs />
       <Student />
     </main>
