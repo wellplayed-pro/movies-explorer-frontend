@@ -2,7 +2,7 @@ import React from 'react';
 import './AboutMe.css';
 import photo from '../../../images/photo.png';
 import { Link } from 'react-router-dom';
-import Portfolio from '../../Portfolio/Portfolio'
+import Portfolio from '../Portfolio/Portfolio'
 
 const AboutMe = () => {
   return (
