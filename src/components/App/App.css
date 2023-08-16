@@ -1,7 +1,3 @@
-.body {
-  background: #202020;
+body {
   font-family: 'Inter', 'Arial', sans-serif;
-  color: #fff;
-  max-width: 1280px;
-  margin: 0 auto;
 }

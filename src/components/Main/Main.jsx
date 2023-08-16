@@ -1,15 +1,15 @@
 import React from 'react';
-import AboutProject from '../AboutProject/AboutProject';
+import Promo from './Promo/Promo';
 import Header from '../Header/Header';
-import AboutMe from '../AboutMe/AboutMe';
+import AboutMe from './AboutMe/AboutMe';
 import Student from '../Student/Student';
-import Techs from '../Techs/Techs';
+import Techs from './Techs/Techs';
 
 const Main = () => {
   return (
     <main>
       <Header />
-      <AboutProject />
+      <Promo />
       <AboutMe />
       <Techs />
       <Student />

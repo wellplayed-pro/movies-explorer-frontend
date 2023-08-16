@@ -8,3 +8,10 @@
 .header__black {
   background-color: #202020;
 }
+
+@media (max-width: 780px) {
+  .header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
