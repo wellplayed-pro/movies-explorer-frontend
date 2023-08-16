@@ -2,8 +2,9 @@ import React from 'react';
 import Promo from './Promo/Promo';
 import Header from '../Header/Header';
 import AboutProject from './AboutProject/AboutProject';
-import Student from '../Student/Student';
+import Student from './Student/Student';
 import Techs from './Techs/Techs';
+import './SectionTitle/SectionTitle.css'
 
 const Main = () => {
   return (

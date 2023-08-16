@@ -4,7 +4,7 @@ import './Techs.css';
 const Techs = () => {
   return (
     <section className='tech' id='tech'>
-    <h2 className='tech__title'>Технологии</h2>
+    <h2 className='main-section__title'>Технологии</h2>
     <h3 className='tech__subtitle'>7 технологий</h3>
     <p className='tech__text'>На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
     <ul className='tech__list'>

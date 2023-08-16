@@ -5,8 +5,8 @@ const AboutProject = () => {
   return (
     <section
       className='about' id='about'>
-        <h2 className='about__title'>О проекте</h2>
-        <ul className='about__info'>
+        <h2 className='main-section__title'>О проекте</h2>
+        <ul className='about__info'> 
           <li className='about__info-element'>
             <h3 className='about__info-subtitle'>Дипломный проект включал 5 этапов</h3>
             <p className='about__info-text'>Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.</p>
