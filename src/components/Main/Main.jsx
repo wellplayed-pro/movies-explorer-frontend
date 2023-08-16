@@ -2,7 +2,7 @@ import React from 'react';
 import Promo from './Promo/Promo';
 import Header from '../Header/Header';
 import AboutProject from './AboutProject/AboutProject';
-import Student from './Student/Student';
+import AboutMe from './AboutMe/AboutMe';
 import Techs from './Techs/Techs';
 import './SectionTitle/SectionTitle.css'
 
@@ -13,7 +13,7 @@ const Main = () => {
       <Promo />
       <AboutProject />
       <Techs />
-      <Student />
+      <AboutMe />
     </main>
   );
 };

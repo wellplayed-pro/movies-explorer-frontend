@@ -87,7 +87,7 @@
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 500px) {
   .promo__container {
     padding: 70px 0;
     padding-bottom: 30px;
