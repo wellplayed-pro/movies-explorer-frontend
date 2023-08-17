@@ -11,7 +11,7 @@ const Portfolio = () => {
           <p className='portfolio__name'>Статический сайт</p>
             <Link 
             className='portfolio__link'
-            to={'https://github.com/wellplayed-pro/Learn-to-learn'}
+            to={'https://github.com/wellplayed-pro/how-to-learn'}
             target='_blank'
             rel='noreferrer'>
               <span className='portfolio__icon'></span>
@@ -31,7 +31,7 @@ const Portfolio = () => {
           <p className='portfolio__name'>Одностраничное приложение</p>
             <Link 
             className='portfolio__link'
-            to={'https://wellplayed-pro.github.io/mesto/'}
+            to={'https://ambernet15pr.nomoredomains.xyz/'}
             target='_blank'
             rel='noreferrer'>
               <span className='portfolio__icon'></span>

@@ -1,35 +1,22 @@
-import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-      <h2 className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</h2>
-      <div className='footer__wrapper'>
-        <span className='footer__span'>&#169; {new Date().getFullYear()}</span>
-        <ul className='footer__links'>
-          <li className='footer__links-element'>
-            <Link
-              className='footer__link'
-              to='https://practicum.yandex.ru/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Яндекс.Практикум
-            </Link>
-          </li>
-          <li className='footer__links-element'>
-            <Link
-              className='footer__link'
-              to='https://github.com/wellplayed-pro'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Github
-            </Link>
-          </li>
-        </ul>
+    <footer className="footer">
+      <h3 className="footer__title">Учебный проект Яндекс.Практикум х BeatFilm.</h3>
+      <div className="footer__container">
+        <p className="footer__copyright">&copy; 2023</p>
+
+        <nav className="footer__nav">
+          <ul className="footer__nav-list">
+            <li className="footer__nav-item">
+              <a className="footer__nav-link" href="https://practicum.yandex.ru/web/" target="_blank" rel="noreferrer">Яндекс.Практикум</a>
+            </li>
+            <li className="footer__nav-item">
+              <a className="footer__nav-link" href="https://github.com/wellplayed-pro/" target="_blank" rel="noreferrer">Github</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );

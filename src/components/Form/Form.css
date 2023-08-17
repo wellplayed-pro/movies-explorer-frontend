@@ -25,7 +25,6 @@
   }
   
   .form__title {
-    /* align-self: flex-start; */
     font-size: 24px;
     font-weight: 500;
     line-height: normal;
@@ -36,11 +35,12 @@
   .form__button {
   width: 100%;
   border-radius: 3px;
-  background: #4285F4;
+  background: #3456F3;
   padding-top: 13px;
   padding-bottom: 15px;
   margin: 69px 0 16px;
   transition: 0.5s;
+  color:#FFF;
   }
   
   .form__button:hover{
@@ -57,7 +57,7 @@
   }
   
   .form__button-span-link{
-    color: #4285F4;
+    color: #3456F3;
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
