@@ -1,8 +1,8 @@
-.about {
+.about-project {
   padding: 110px 70px;
 }
 
-.about__info {
+.about-project__info {
   margin: 0;
   list-style: none;
   display: flex;
@@ -11,11 +11,11 @@
   padding-bottom: 110px;
 }
 
-.about__info-element {
+.about-project__info-element {
   max-width: 550px;
 }
 
-.about__info-subtitle {
+.about-project__info-subtitle {
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
@@ -23,80 +23,102 @@
   margin: 0;
 }
 
-.about__info-text {
+.about-project__info-text {
+  padding-top: 26px;
+  margin: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.about__stage {
+.about-project__stage {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: 36px 17px;
   gap: 14px 0;
 }
 
-.about__stage-style {
+.about-project__stage-progress {
   width: 100%;
   height: 36px;
   margin: 0;
   display: flex;
   align-items: center;
-}
-
-.about__stage-subtitle {
+  background-color: #f2f2f2;
   justify-content: center;
   font-size: 14px;
   font-weight: 400;
   line-height: normal;
-  background-color: #F2F2F2;
-}
-
-.about__stage-subtitle_modification {
-  background: #3ddc84;
   min-width: 100px;
 }
 
-.about__stage-desc {
-  justify-content: center;
-  color: #8b8b8b;
+.about-project__stage-progress_active {
+  background: #3ddc84;
+}
+
+.about-project__stage-desc {
+  text-align: center;
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
+  color: #a0a0a0;
+  font-style: normal;
+  margin: 0;
 }
 
 @media (max-width: 780px) {
-  .about {
-    padding: 50px 90px;
+  .about-project {
+    padding: 90px 50px;
   }
 
-  .about__info {
-    gap: 30px;
+  .about-project__info {
+    gap: 36px;
     padding-bottom: 93px;
+  }
+
+  .about-project__info-text {
+    padding-top: 22px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
 @media (max-width: 500px) {
-  .about {
+  .about-project {
     padding: 70px 18px;
   }
 
-  .about__info {
+  .about-project__info {
     flex-direction: column;
     padding-top: 60px;
     padding-bottom: 60px;
     gap: 56px;
   }
 
-  .about__info-subtitle {
-    margin-bottom: 16px;
+  .about-project__info-subtitle {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    line-height: 1.2;
   }
 
-  .about__info-text {
+  .about-project__info-text {
+    padding-top: 16px;
     margin-bottom: 0;
+    font-size: 11px;
+    line-height: 16px;
   }
 
-  .about__stage {
+  .about-project__stage {
     padding-top: 0;
     gap: 10px 0;
+
+    grid-template-rows: 36px 14px;
+  }
+  .about-project__stage-progress {
+    font-size: 11px;
+  }
+
+  .about-project__stage-desc {
+    font-size: 11px;
   }
 }

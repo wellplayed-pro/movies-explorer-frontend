@@ -2,7 +2,7 @@
   align-items: center;
   padding: 18px 70px;
   position: relative;
-  background-color:  #073042;
+  background-color: #073042;
 }
 
 .header__black {
@@ -13,5 +13,11 @@
   .header {
     padding-left: 30px;
     padding-right: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 18px 14px;
   }
 }

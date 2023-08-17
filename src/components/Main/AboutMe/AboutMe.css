@@ -20,7 +20,7 @@
   padding-top: 66px;
 }
 
-.stident__name {
+.student__name {
   font-size: 50px;
   font-weight: 400;
   line-height: 58px;
@@ -73,6 +73,25 @@
   .about-me__intro {
     padding-bottom: 87px;
   }
+  .student__name {
+    font-size: 40px;
+    line-height: 40px; /* 100% */
+    letter-spacing: -1.6px;
+  }
+  .about-me__job {
+    font-size: 12px;
+    line-height: 18px; /* 150% */
+    padding-bottom: 20px;
+  }
+  .about-me__intro {
+    font-size: 12px;
+    line-height: 18px; /* 150% */
+  }
+  .about-me__photo {
+    width: 255px;
+    height: 307px;
+    flex-shrink: 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -83,11 +102,14 @@
   .about-me__wrap {
     padding-top: 60px;
     flex-wrap: wrap;
+    gap: 40px;
   }
 
   .about-me__photo {
     order: 1;
     margin: 0 auto;
+    width: 100%;
+    height: 352px;
   }
 
   .about-me__content {
@@ -95,5 +117,16 @@
   }
   .about-me__intro {
     padding-bottom: 40px;
+    font-size: 11px;
+    line-height: 16px; /* 145.455% */
+  }
+
+  .student__name {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+  }
+  .about-me__job {
+    font-size: 11px;
+    line-height: 16px; /* 145.455% */
   }
 }
