@@ -2,11 +2,10 @@
   align-items: center;
   padding: 18px 70px;
   position: relative;
-  background-color: #073042;
 }
 
-.header__black {
-  background-color: #202020;
+.header__promo {
+  background-color: #073042;
 }
 
 @media (max-width: 780px) {

@@ -23,3 +23,12 @@
 .auth-sub-action__link:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 500px) {
+  .auth-sub-action__span {
+    font-size: 12px;
+  }
+  .auth-sub-action__link {
+    font-size: 12px;
+  }
+}
