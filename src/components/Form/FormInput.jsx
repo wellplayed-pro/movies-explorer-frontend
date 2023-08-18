@@ -7,6 +7,7 @@ const FormInput = ({
   inputType,
   placeholder,
   errorText,
+  ...props
 }) => {
   const type = inputType ?? "text";
   const isError = !!errorText;
@@ -23,6 +24,7 @@ const FormInput = ({
           id={inputId}
           type={type}
           placeholder={placeholder}
+          {...props}
         />
       </div>
       <div className="form-input__divider"></div>

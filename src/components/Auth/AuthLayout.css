@@ -1,11 +1,9 @@
 .auth-layout {
   max-width: 396px;
-  width: 100%;
   margin: 70px auto;
 }
 
 .auth-layout__link {
-  align-self: flex-start;
   transition: 0.5s;
 }
 
@@ -24,4 +22,27 @@
   line-height: 1.2;
   width: 100%;
   margin: 40px 0;
+}
+
+@media (max-width: 800px) {
+  .auth-layout {
+    margin-top: 232px;
+  }
+}
+
+@media (max-width: 500px) {
+  .auth-layout {
+    margin: 56px 30px;
+  }
+  .auth-layout__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .auth-layout__title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
 }

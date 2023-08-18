@@ -18,3 +18,10 @@
   cursor: pointer;
   opacity: 0.8;
 }
+
+@media (max-width: 500px) {
+  .form__button {
+    margin-top: 214px;
+    font-size: 12px;
+  }
+}

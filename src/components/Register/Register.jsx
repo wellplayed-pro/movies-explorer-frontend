@@ -12,11 +12,14 @@ const Register = () => {
           inputId="name"
           labelText="Имя"
           placeholder="Введите имя"
+          required
         ></FormInput>
         <FormInput
           inputId="email"
           labelText="E-mail"
           placeholder="Укажите почту"
+          inputType="email"
+          required
         ></FormInput>
         <FormInput
           inputId="password"
@@ -24,6 +27,7 @@ const Register = () => {
           placeholder="Придумайте пароль"
           inputType="password"
           errorText="Что-то пошло не так..."
+          required
         ></FormInput>
 
         <FormButton text="Зарегистрироваться"></FormButton>

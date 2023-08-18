@@ -6,10 +6,12 @@ import logo from "../../images/logo.svg";
 const AuthLayout = ({ children, title }) => {
   return (
     <section className="auth-layout">
-      <Link className="auth-layout__link" to={"/"}>
-        <img className="auth-layout__logo" src={logo} alt="Логотип" />
-      </Link>
-      <h1 className="auth-layout__title">{title}</h1>
+      <div className="auth-layout__header">
+        <Link className="auth-layout__link" to={"/"}>
+          <img className="auth-layout__logo" src={logo} alt="Логотип" />
+        </Link>
+        <h1 className="auth-layout__title">{title}</h1>
+      </div>
       {children}
     </section>
   );
