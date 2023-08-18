@@ -2,12 +2,12 @@ export const startCards = [
   {
     name: '33 слова о дизайне',
     time: '1ч 42м',
-    image: '../images/poster/33slova.jpg',
+    image: '../../../images/poster/33slova.jpg',
   },
   {
     name: 'Киноальманах «100 лет дизайна»',
     time: '1ч 42м',
-    image: '../images/poster/kinoal.jpg',
+    image: '../../images/poster/kinoal.jpg',
   },
   {
     name: 'В погоне за Бенкси',
@@ -86,7 +86,7 @@ export const saveCards = [
   {
     name: '33 слова о дизайне',
     time: '1ч 42м',
-    image: '../images/poster/33slova.jpg',
+    image: '../../images/poster/33slova.jpg',
   },
   {
     name: 'Киноальманах «100 лет дизайна»',

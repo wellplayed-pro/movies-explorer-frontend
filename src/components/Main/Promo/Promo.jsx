@@ -16,7 +16,7 @@ const Promo = () => {
           </p>
           <Link
             className="promo__link"
-            to="about"
+            to="about-project"
             smooth={true}
             duration={300}
           >
@@ -26,7 +26,7 @@ const Promo = () => {
         <img
           className="promo__globe"
           src={GlobeWeb}
-          alt="Изображениеглобуса"
+          alt="Изображение глобуса"
         />
       </div>
     </section>
