@@ -1,0 +1,25 @@
+.auth-sub-action {
+  display: flex;
+  justify-content: center;
+
+  font-weight: 400;
+  line-height: normal;
+}
+
+.auth-sub-action__span {
+  color: #8b8b8b;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-sub-action__link {
+  color: #3456f3;
+  font-size: 14px;
+  margin-left: 6px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.auth-sub-action__link:hover {
+  opacity: 0.8;
+}

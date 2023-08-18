@@ -1,30 +1,39 @@
-import React from 'react';
-import './Register.css'
-import Form from '../Form/Form';
+import Form from "../Form/Form";
+import AuthLayout from "../Auth/AuthLayout";
+import FormButton from "../Form/FormButton";
+import AuthSubAction from "../Auth/AuthSubAction";
+import FormInput from "../Form/FormInput";
 
 const Register = () => {
   return (
-    <section className='register'>
-      <Form
-        title='Добро пожаловать!'
-        buttonName='Зарегистрироваться'
-        spanText='Уже зарегистрированы?'
-        spanPatch='/signin'
-        spanLink='Войти'
-      >
-        <label className='form_label' htmlFor='name'>Имя</label>
-        <input className='form__input' id='name' type='text' placeholder='Введите имя' />
-        <span className='form__span'>Что-то пошло не так</span>
+    <AuthLayout title="Добро пожаловать!">
+      <Form>
+        <FormInput
+          inputId="name"
+          labelText="Имя"
+          placeholder="Введите имя"
+        ></FormInput>
+        <FormInput
+          inputId="email"
+          labelText="E-mail"
+          placeholder="Укажите почту"
+        ></FormInput>
+        <FormInput
+          inputId="password"
+          labelText="Пароль"
+          placeholder="Придумайте пароль"
+          inputType="password"
+          errorText="Что-то пошло не так..."
+        ></FormInput>
 
-        <label className='form_label' htmlFor='email'>E-mail</label>
-        <input className='form__input' id='email' type='text' placeholder='Укажите почту' />
-        <span className='form__span'> Что-то пошло не так </span>
-
-        <label className='form_label' htmlFor='password'> Пароль </label>
-        <input className='form__input form__input-error' id='name' type='password' placeholder='Придумайте пароль' />
-        <span className='form__span form__span-error'> Что-то пошло не так </span>
+        <FormButton text="Зарегистрироваться"></FormButton>
+        <AuthSubAction
+          spanText="Уже зарегистрированы?"
+          spanPatch="/signin"
+          spanLink="Войти"
+        ></AuthSubAction>
       </Form>
-    </section>
+    </AuthLayout>
   );
 };
 
