@@ -21,6 +21,7 @@ const Login = () => {
           placeholder="Придумайте пароль"
           inputType="password"
           errorText="Что-то пошло не так..."
+          required
         ></FormInput>
 
         <FormButton text="Войти"></FormButton>
