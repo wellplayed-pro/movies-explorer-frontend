@@ -6,7 +6,7 @@ import FloatActions from "../FloatActions/FloatActions";
 const Profile = () => {
   return (
     <div>
-      <Header />
+      <Header isAuth={true} />
       <section className="profile">
         <h1 className="profile__title">Привет, Виталий!</h1>
         <div class="profile__content">

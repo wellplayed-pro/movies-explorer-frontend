@@ -55,6 +55,7 @@
   padding-top: 203px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .profile__button {
@@ -84,7 +85,7 @@
 
 @media (max-width: 800px) {
   .profile {
-    padding-top: 236px;
+    padding-top: 234px;
   }
   .profile__title {
     margin-bottom: 80px;
@@ -95,10 +96,21 @@
 }
 
 @media (max-width: 500px) {
+  .profile {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 66px;
+  }
+
   .profile__title {
-    margin-bottom: 70px;
+    margin-bottom: 64px;
   }
   .profile__buttons {
     padding-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .profile__button {
+    font-size: 12px;
   }
 }

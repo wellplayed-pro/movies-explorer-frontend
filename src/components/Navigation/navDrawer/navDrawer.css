@@ -1,0 +1,125 @@
+.nav-drawer__btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.nav-drawer--open .nav-drawer__content {
+  right: 0;
+}
+
+.nav-drawer__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.nav-drawer--open .nav-drawer__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-drawer__content {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: -520px;
+  width: 520px;
+  height: 100vh;
+  background-color: #ffffff;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-drawer__close-btn {
+  padding: 22px;
+  align-self: flex-end;
+}
+
+.nav-drawer__list {
+  margin-top: 84px;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-drawer__item {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.nav-drawer__link {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.nav-drawer__link:last-child {
+  margin-bottom: 0px;
+}
+
+.nav-drawer__link_active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Отступ до линии */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Толщина линии */
+  background-color: #000;
+}
+
+.nav-drawer__profile-btn {
+  margin-top: auto;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 500px) {
+  .nav-drawer__content {
+    width: 100vw;
+    right: -100vw;
+  }
+
+  .nav-drawer__close-btn {
+    padding-right: 12px;
+    padding-top: 8px;
+  }
+
+  .nav-drawer__icon {
+    height: 44px;
+  }
+  .nav-drawer__close-icon {
+    width: 32px;
+  }
+  .nav-drawer--open .nav-drawer__content {
+    right: 0;
+  }
+
+  .nav-drawer__list {
+    margin-top: 70px;
+  }
+
+  .nav-drawer__item {
+    margin-bottom: 24px;
+  }
+
+  .nav-drawer__profile-btn {
+    margin-bottom: 46px;
+  }
+}

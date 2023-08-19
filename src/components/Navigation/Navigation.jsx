@@ -1,21 +1,32 @@
-import React from "react";
-import './Navigation.css';
-import { Link, useLocation } from "react-router-dom";
-import NavigationMain from './NavigationMain/NavigationMain';
-import NavigationProfile from './NavigationProfile/NavigationProfile';
-import logo from './../../images/logo.svg';
+import "./Navigation.css";
+import { NavLink } from "react-router-dom";
+import NavDrawer from "./navDrawer/navDrawer";
 
-const Navigation = () => {
-  const location = useLocation();
-
+const NavigationProfile = () => {
   return (
-    <nav className='nav'>
-      <Link to='/' tabIndex={1}>
-        <img className='nav__logo' src={logo} alt='Логотип' />
-      </Link>
-      {location.pathname === '/' ? <NavigationMain /> : <NavigationProfile />}
-    </nav>
-  )
-}
+    <div className="nav">
+      <NavDrawer className="nav__drawer header-icon" />
+      <nav className="nav__links">
+        <NavLink
+          className={({ isActive }) =>
+            `nav__link ${isActive ? "nav__link-active" : ""}`
+          }
+          to="/movies"
+        >
+          Фильмы
+        </NavLink>
 
-export default Navigation;
+        <NavLink
+          className={({ isActive }) =>
+            `nav__link ${isActive ? "nav__link-active" : ""}`
+          }
+          to="/saved-movies"
+        >
+          Сохраненные фильмы
+        </NavLink>
+      </nav>
+    </div>
+  );
+};
+
+export default NavigationProfile;

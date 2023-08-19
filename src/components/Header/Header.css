@@ -1,15 +1,32 @@
 .header {
   align-items: center;
-  padding: 18px 70px;
+  padding: 17px 70px;
   position: relative;
+  color: black;
 }
 
 .header__promo {
   background-color: #073042;
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__promo .header-btn {
+  background-color: #2be080;
+  color: #000;
+}
+
+.header__promo .header-icon {
+  fill: white;
 }
 
 @media (max-width: 780px) {
   .header {
+    padding-top: 15px;
     padding-left: 30px;
     padding-right: 30px;
   }
