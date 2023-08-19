@@ -1,45 +1,65 @@
 .movie__description {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  border-bottom: 1px solid #e8e8e8;
+  gap: 0px 20px;
 }
 
 .movie__name {
-  padding: 18px;
-  font-size: 15px;
+  margin: 0;
+  margin-top: 14px;
+  padding: 0;
+  color: #000;
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: normal;
+  height: 46px;
 }
 
 .movie__time {
-  padding: 18px;
-  color: #8B8B8B;
-  font-size: 13px;
+  color: #a0a0a0;
+  font-size: 11px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 18px;
-  text-align: right;
+  line-height: normal;
+  margin: 6px 0;
 }
 
 .movie__image {
   width: 100%;
   display: block;
-  object-fit: cover;  
+  object-fit: cover;
+  aspect-ratio: 270 / 151;
 }
 
-.movie__button {
-  min-width: 100px;
-  height: 29px;
-  border-radius: 30px;
-  border: none; 
-  margin: 18px 0;
-  color: #FFF;
-font-size: 12px;
-font-weight: 400;
-line-height: 11px;
-cursor: pointer;
-background: url(../../../images/like.svg) center no-repeat;
+.movie__btn {
+  margin-top: 10px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
-.movie__button_like {
-  background: url(../../../images/liked.svg) center no-repeat;
+@media (max-width: 800px) {
+  .movie__image {
+    aspect-ratio: 339 / 190;
+  }
+}
+
+@media (max-width: 500px) {
+  .movie__name {
+    font-size: 12px;
+  }
+
+  .movie__time {
+    font-size: 10px;
+  }
 }

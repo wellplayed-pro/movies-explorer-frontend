@@ -1,30 +1,36 @@
-import React from "react";
 import "./MovieCard.css";
-import { useState } from "react";
+import liked from "../../../images/liked.svg";
+import notLiked from "../../../images/notLiked.svg";
+import unlike from "../../../images/unlike.svg";
+import { useMemo, useState } from "react";
 
 const MovieCard = ({ movie }) => {
-  const [isLiked, setIsLiked] = useState(false);
-
-  const handleClickLike = () => {
-    setIsLiked((isLiked) => !isLiked);
-  };
-
-  const likeMovieButton = `movie__button ${isLiked && "movie__button_like"}`;
+  const [isHoverd, setHovered] = useState(false);
+  const currentImg = useMemo(() => {
+    if (movie.isLiked) {
+      if (isHoverd) return unlike;
+      else return liked;
+    }
+    if (isHoverd) return liked;
+    return notLiked;
+  }, [isHoverd, movie.isLiked]);
 
   return (
     <li className="movie">
+      <img className="movie__image" src={movie.image} alt={movie.name} />
       <div className="movie__description">
         <h2 className="movie__name">{movie.name}</h2>
-        <p className="movie__time">{movie.time}</p>
+
+        <button
+          className="movie__btn"
+          type="button"
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          <img src={currentImg} alt="like" />
+        </button>
       </div>
-      <img className="movie__image" src={movie.image} alt={movie.name} />
-      <button
-        className={likeMovieButton}
-        onClick={handleClickLike}
-        type="button"
-      >
-        {/* {!isLiked ? textButton : null} */}
-      </button>
+      <p className="movie__time">{movie.time}</p>
     </li>
   );
 };

@@ -1,20 +1,19 @@
-import React from 'react';
-import './SavedMovies.css';
-import Header from '../Header/Header';
-import SearchForm from '../SearchForm/SearchForm';
-import MoviesCardList from '../Movies/MoviesCardList/MoviesCardList';
+import React from "react";
+import Header from "../Header/Header";
+import SearchForm from "../SearchForm/SearchForm";
+import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
+import { moviesCards } from "../../utils/testcards";
 
-
-const SavedMovies = ({textButton}) => {
+const Movies = () => {
   return (
     <>
-    <Header />
-      <main className='movies'>      
-      <SearchForm />
-      <MoviesCardList textButton={textButton} />
-    </main>
+      <Header isAuth />
+      <section className="movies">
+        <SearchForm />
+        <MoviesCardList movies={moviesCards.slice(0, 3)} />
+      </section>
     </>
   );
 };
 
-export default SavedMovies;
+export default Movies;

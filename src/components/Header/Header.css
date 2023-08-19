@@ -3,6 +3,8 @@
   padding: 17px 70px;
   position: relative;
   color: black;
+  height: 74px;
+  box-sizing: border-box;
 }
 
 .header__promo {
@@ -26,9 +28,7 @@
 
 @media (max-width: 780px) {
   .header {
-    padding-top: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 15px 30px;
   }
 }
 

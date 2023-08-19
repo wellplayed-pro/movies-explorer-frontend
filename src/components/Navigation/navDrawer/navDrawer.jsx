@@ -22,24 +22,9 @@ const NavDrawer = ({ className }) => {
           fill="inherit"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M36 14L8 14V11L36 11V14Z"
-            fill="inherit"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M36 24L8 24V21L36 21V24Z"
-            fill="inherit"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M36 34L8 34V31L36 31V34Z"
-            fill="inherit"
-          />
+          <path d="M36 14L8 14V11L36 11V14Z" fill="inherit" />
+          <path d="M36 24L8 24V21L36 21V24Z" fill="inherit" />
+          <path d="M36 34L8 34V31L36 31V34Z" fill="inherit" />
         </svg>
       </button>
       <div className="nav-drawer__overlay" onClick={toggle}></div>

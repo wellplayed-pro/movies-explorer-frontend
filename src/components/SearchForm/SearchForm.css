@@ -16,7 +16,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
-  padding: 8px 10px;
+  padding: 7px 10px;
 }
 
 .search-form__btn:hover {
@@ -37,4 +37,30 @@
   border: none;
   padding: 0;
   outline: inherit;
+}
+
+.search-form__subaction {
+  display: flex;
+}
+
+@media (max-width: 800px) {
+  .search-form__subaction {
+    justify-content: end;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-form {
+    padding: 0 14px;
+  }
+  .search-form__input {
+    font-size: 18px;
+  }
+  .search-form__subaction {
+    justify-content: center;
+  }
+
+  .search-form__form {
+    padding-bottom: 20px;
+  }
 }

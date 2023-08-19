@@ -1,23 +1,25 @@
 import React from "react";
 import { useState } from "react";
-import './CheckBox.css'
+import "./CheckBox.css";
 
-const CheckBox = ({ onFilter }) => {
+const CheckBox = ({ className }) => {
   const [shorts, setShorts] = useState(true);
   return (
-    <section className='checkbox'>
+    <section className={`checkbox ${className}`}>
       <input
-        type='checkbox'
-        id='checkbox'
-        className='checkbox__input'
+        type="checkbox"
+        id="checkbox"
+        className="checkbox__input"
         checked={shorts}
-        onChange={() => { setShorts(!shorts) }}
+        onChange={() => {
+          setShorts(!shorts);
+        }}
       />
-      <label
-        htmlFor='checkbox'
-        className='checkbox__toggle'>Короткометражки</label>
+      <label htmlFor="checkbox" className="checkbox__toggle">
+        Короткометражки
+      </label>
     </section>
-  )
-}
+  );
+};
 
 export default CheckBox;

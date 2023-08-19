@@ -12,7 +12,6 @@ const Movies = () => {
       <section className="movies">
         <SearchForm />
         <MoviesCardList movies={moviesCards} />
-        <button className="movies__button">Еще</button>
       </section>
     </>
   );

@@ -18,7 +18,9 @@ const SearchForm = () => {
           Найти
         </button>
       </form>
-      <CheckBox />
+      <div className="search-form__subaction">
+        <CheckBox className="search-form__checkbox" />
+      </div>
     </section>
   );
 };
