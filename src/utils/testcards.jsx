@@ -1,83 +1,119 @@
-export const startCards = [
+import slova from "../images/poster/33slova.jpg";
+import kinoal from "../images/poster/kinoal.jpg";
+import benksi from "../images/poster/benksi.jpg";
+import baskia from "../images/poster/baskia.jpg";
+import beg from "../images/poster/beg.jpg";
+import kniga from "../images/poster/kniga.jpg";
+import germany from "../images/poster/germany.jpg";
+import gimme from "../images/poster/gimme.jpg";
+import jenis from "../images/poster/jenis.jpg";
+import sob from "../images/poster/sob.png";
+import pijay from "../images/poster/pijay.jpg";
+import povolnam from "../images/poster/povolnam.jpg";
+import rudeboy from "../images/poster/rudeboy.jpg";
+import skate from "../images/poster/skate.jpg";
+import war from "../images/poster/war.jpg";
+import zona from "../images/poster/zona.jpg";
+
+
+
+
+export const moviesCards = [
   {
     name: '33 слова о дизайне',
     time: '1ч 42м',
-    image: '../../../images/poster/33slova.jpg',
+    image: slova,
+    isLiked: true,
   },
   {
     name: 'Киноальманах «100 лет дизайна»',
     time: '1ч 42м',
-    image: '../../images/poster/kinoal.jpg',
+    image: kinoal,
+    isLiked: true,
   },
   {
     name: 'В погоне за Бенкси',
     time: '1ч 42м',
-    image: '../images/poster/benksi.jpg',
+    image: benksi,
+    isLiked: true,
   },
   {
     name: 'Баския: Взрыв реальности',
     time: '1ч 42м',
-    image: '../images/poster/baskia.jpg',
+    image: baskia,
+    isLiked: false,
   },
   {
     name: 'Бег это свобода',
     time: '1ч 42м',
-    image: '../images/poster/beg.jpg',
+    image: beg,
+    isLiked: false,
   },
   {
     name: 'Книготорговцы',
     time: '1ч 42м',
-    image: '../images/poster/kniga.jpg',
+    image: kniga,
+    isLiked: false,
   },
   {
     name: 'Когда я думаю о Германии ночью',
     time: '1ч 42м',
-    image: '../images/poster/germany.jpg',
+    image: germany,
+    isLiked: false,
   },
   {
     name: 'Gimme Danger: История Игги и The Stooges ',
     time: '1ч 42м',
-    image: '../images/poster/gimme.jpg',
+    image: gimme,
+    isLiked: false,
   },
   {
     name: 'Дженис: Маленькая девочка грустит',
     time: '1ч 42м',
-    image: '../images/poster/jenis.jpg',
+    image: jenis,
+    isLiked: false,
   },
   {
     name: 'Соберись перед прыжком',
     time: '1ч 42м',
-    image: '../images/poster/sob.png',
+    image: sob,
+    isLiked: false,
   },
   {
     name: 'Пи Джей Харви: A dog called money',
     time: '1ч 42м',
-    image: '../images/poster/pijay.jpg',
+    image: pijay,
+    isLiked: false,
   },
   {
     name: 'По волнам: Искусство звука в кино',
     time: '1ч 42м',
-    image: '../images/poster/povolnam.jpg',
+    image: povolnam,
+    isLiked: false,
   },
   {
     name: 'Рудбой',
     time: '1ч 42м',
-    image: '../images/poster/rudeboy.jpg',
+    image: rudeboy,
+    isLiked: false,
   },
   {
     name: 'Скейт — кухня',
     time: '1ч 42м',
-    image: '../images/poster/skate.jpg',
+    image: skate,
+    isLiked: false,
   },
   {
     name: 'Война искусств',
     time: '1ч 42м',
-    image: '../images/poster/war.jpg',
+    image: war,
+    isLiked: false,
   },
   {
     name: 'Зона',
     time: '1ч 42м',
-    image: '../images/poster/zona.jpg',
+    image: zona,
+    isLiked: false,
   },
 
 ];
@@ -86,16 +122,19 @@ export const saveCards = [
   {
     name: '33 слова о дизайне',
     time: '1ч 42м',
-    image: '../../images/poster/33slova.jpg',
+    image: slova,
+    isLiked: true,
   },
   {
     name: 'Киноальманах «100 лет дизайна»',
     time: '1ч 42м',
-    image: '../images/poster/kinoal.jpg',
+    image: kinoal,
+    isLiked: true,
   },
   {
     name: 'В погоне за Бенкси',
     time: '1ч 42м',
-    image: '../images/poster/benksi.jpg',
+    image: benksi,
+    isLiked: true,
   },
 ]

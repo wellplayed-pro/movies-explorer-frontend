@@ -1,20 +1,20 @@
-import React from 'react';
-import Header from '../Header/Header';
-import SearchForm from '../SearchForm/SearchForm';
-import MoviesCardList from './MoviesCardList/MoviesCardList';
-import './Movies.css';
+import React from "react";
+import Header from "../Header/Header";
+import SearchForm from "../SearchForm/SearchForm";
+import MoviesCardList from "./MoviesCardList/MoviesCardList";
+import { moviesCards } from "../../utils/testcards";
+import "./Movies.css";
 
-const Movies = ({ textButton }) => {
+const Movies = () => {
   return (
     <>
-    <Header />
-      <main className='movies'>      
-      <SearchForm />
-      <MoviesCardList textButton={textButton} />
-      <button className='movies__button'>Еще</button>
-    </main>
+      <Header isAuth />
+      <section className="movies">
+        <SearchForm />
+        <MoviesCardList movies={moviesCards} />
+        <button className="movies__button">Еще</button>
+      </section>
     </>
-
   );
 };
 
