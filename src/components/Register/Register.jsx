@@ -3,7 +3,6 @@ import AuthLayout from "../Auth/AuthLayout";
 import FormButton from "../Form/FormButton";
 import AuthSubAction from "../Auth/AuthSubAction";
 import FormInput from "../Form/FormInput";
-import FloatActions from "../FloatActions/FloatActions";
 
 const Register = () => {
   return (
@@ -31,14 +30,12 @@ const Register = () => {
           required
         ></FormInput>
 
-        <FloatActions>
-          <FormButton text="Зарегистрироваться"></FormButton>
-          <AuthSubAction
-            spanText="Уже зарегистрированы?"
-            spanPatch="/signin"
-            spanLink="Войти"
-          ></AuthSubAction>
-        </FloatActions>
+        <FormButton text="Зарегистрироваться"></FormButton>
+        <AuthSubAction
+          spanText="Уже зарегистрированы?"
+          spanPatch="/signin"
+          spanLink="Войти"
+        ></AuthSubAction>
       </Form>
     </AuthLayout>
   );

@@ -1,13 +1,14 @@
 .header {
+  display: flex;
   align-items: center;
   padding: 17px 70px;
-  position: relative;
   color: black;
   height: 74px;
   box-sizing: border-box;
+  justify-content: center;
 }
 
-.header__promo {
+.header_promo {
   background-color: #073042;
   color: white;
 }
@@ -15,14 +16,16 @@
 .header-content {
   display: flex;
   justify-content: space-between;
+  max-width: 1280px;
+  width: 100%;
 }
 
-.header__promo .header-btn {
+.header_promo .header-btn {
   background-color: #2be080;
   color: #000;
 }
 
-.header__promo .header-icon {
+.header_promo .header-icon {
   fill: white;
 }
 

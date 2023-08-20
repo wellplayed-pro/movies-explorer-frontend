@@ -4,7 +4,7 @@ import Logo from "../../Logo/Logo";
 
 const UnauthHeader = () => {
   return (
-    <div className="header-content">
+    <div className="header-content unauth-header">
       <Logo />
       <div className="unauth-header__links">
         <Link

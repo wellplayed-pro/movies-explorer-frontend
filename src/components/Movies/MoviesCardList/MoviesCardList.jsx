@@ -3,7 +3,7 @@ import "./MoviesCardList.css";
 import MovieCard from "../MovieCard/MovieCard";
 import useScreenWidth from "../../../utils/useScreenWidth";
 
-const MoviesCardList = ({ movies = [] }) => {
+const MoviesCardList = ({ movies = [], isRemovable = false }) => {
   const screenWidth = useScreenWidth();
 
   const showCount = useMemo(() => {
@@ -24,7 +24,7 @@ const MoviesCardList = ({ movies = [] }) => {
     <div className="movies-list">
       <ul className="movies-list__list">
         {movies.slice(0, showCount).map((movie) => (
-          <MovieCard movie={movie} key={movie.name} />
+          <MovieCard movie={movie} key={movie.name} isRemovable={isRemovable} />
         ))}
       </ul>
       {isBtnShow ? (

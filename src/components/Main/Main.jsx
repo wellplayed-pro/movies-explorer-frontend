@@ -4,15 +4,18 @@ import AboutProject from "./AboutProject/AboutProject";
 import AboutMe from "./AboutMe/AboutMe";
 import Techs from "./Techs/Techs";
 import "./SectionTitle/SectionTitle.css";
+import Page from "../Page/Page";
 
 const Main = () => {
   return (
-    <main>
+    <>
       <Promo />
-      <AboutProject />
-      <Techs />
-      <AboutMe />
-    </main>
+      <Page>
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+      </Page>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.form-input_label {
+.form-input__label {
   align-self: flex-start;
   color: #8b8b8b;
   font-size: 10px;
@@ -26,16 +26,18 @@
   width: 100%;
   border: none;
   padding: 0;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  outline: none;
+}
+
+.form-input__input:focus {
+  border-bottom: 1px solid #3456f3;
 }
 
 .form-input__input_error {
   color: #ff3055;
-}
-
-.form-input__input-wrap {
-  width: 100%;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e8e8e8;
 }
 
 .form-input__error-span {

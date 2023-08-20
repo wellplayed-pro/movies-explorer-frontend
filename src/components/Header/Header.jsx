@@ -9,7 +9,7 @@ const Header = ({ isAuth = false }) => {
   const isPromo = location.pathname === "/";
 
   return (
-    <header className={`header ${isPromo ? "header__promo" : ""}`}>
+    <header className={`header ${isPromo ? "header_promo" : ""}`}>
       {isAuth ? <AuthHeader /> : <UnauthHeader />}
     </header>
   );

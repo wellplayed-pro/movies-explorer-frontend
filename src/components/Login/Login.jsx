@@ -3,7 +3,6 @@ import AuthLayout from "../Auth/AuthLayout";
 import FormButton from "../Form/FormButton";
 import AuthSubAction from "../Auth/AuthSubAction";
 import FormInput from "../Form/FormInput";
-import FloatActions from "../FloatActions/FloatActions";
 
 const Login = () => {
   return (
@@ -24,14 +23,12 @@ const Login = () => {
           errorText="Что-то пошло не так..."
         ></FormInput>
 
-        <FloatActions>
-          <FormButton text="Войти"></FormButton>
-          <AuthSubAction
-            spanText="Еще не зарегистрированы?"
-            spanPatch="/signup"
-            spanLink="Регистрация"
-          ></AuthSubAction>
-        </FloatActions>
+        <FormButton text="Войти"></FormButton>
+        <AuthSubAction
+          spanText="Еще не зарегистрированы?"
+          spanPatch="/signup"
+          spanLink="Регистрация"
+        ></AuthSubAction>
       </Form>
     </AuthLayout>
   );

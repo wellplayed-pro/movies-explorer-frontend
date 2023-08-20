@@ -6,6 +6,10 @@
   padding-bottom: 13px;
 }
 
+.search-form__form:focus-within {
+  border-bottom: 1px solid #3456f3;
+}
+
 .search-form__btn {
   border-radius: 48px;
   background: #3456f3;

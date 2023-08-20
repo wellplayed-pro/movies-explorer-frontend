@@ -1,5 +1,5 @@
 @media (max-width: 800px) {
-  .auth-header__account-btn {
+  .header__account-btn {
     display: none;
   }
 }

@@ -7,10 +7,10 @@ import Portfolio from "../Portfolio/Portfolio";
 const AboutMe = () => {
   return (
     <section className="about-me" id="aboutMe">
-      <h2 className="main-section__title">Студент</h2>
+      <h2 className="main-section-title">Студент</h2>
       <div className="about-me__wrap">
         <div className="about-me__content">
-          <h3 className="student__name">Виталий</h3>
+          <h3 className="about-me__name">Виталий</h3>
           <p className="about-me__job">Фронтенд-разработчик, 30 лет</p>
           <p className="about-me__intro">
             Я родился и живу в Саратове, закончил факультет экономики СГУ. У

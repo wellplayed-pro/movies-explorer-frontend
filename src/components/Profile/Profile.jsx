@@ -1,12 +1,10 @@
 import React from "react";
 import "./Profile.css";
-import Header from "../Header/Header";
-import FloatActions from "../FloatActions/FloatActions";
+import Page from "../Page/Page";
 
 const Profile = () => {
   return (
-    <div>
-      <Header isAuth={true} />
+    <Page>
       <section className="profile">
         <h1 className="profile__title">Привет, Виталий!</h1>
         <div class="profile__content">
@@ -20,17 +18,15 @@ const Profile = () => {
               <span className="profile__field-value">pochta@yandex.ru</span>
             </div>
           </div>
-          <FloatActions>
-            <div className="profile__buttons">
-              <button className="profile__button">Редактировать</button>
-              <button className="profile__button profile__button_red">
-                Выйти из аккаунта
-              </button>
-            </div>
-          </FloatActions>
+          <div className="profile__buttons">
+            <button className="profile__button">Редактировать</button>
+            <button className="profile__button profile__button_red">
+              Выйти из аккаунта
+            </button>
+          </div>
         </div>
       </section>
-    </div>
+    </Page>
   );
 };
 
