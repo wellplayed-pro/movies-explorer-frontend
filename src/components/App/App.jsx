@@ -10,6 +10,7 @@ import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import Profile from '../Profile/Profile';
+import Header from "../Header/Header";
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
   return (
     <CurrentUserContext.Provider value={{}}>
       <div className="page">
-        <div >
+      <Header/>
+        <main>
           <Routes>
             <Route
               path='/'
@@ -52,7 +54,7 @@ function App() {
               element={<NotFound />}
             />
           </Routes>
-        </div>
+        </main>
         {footerSection && <Footer />}
       </div>
     </CurrentUserContext.Provider>
