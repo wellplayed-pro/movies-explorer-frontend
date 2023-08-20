@@ -19,7 +19,8 @@ function App() {
   const isMovies = pathname === "/movies";
   const isSavedMovies = pathname === "/saved-movies";
   const isProfile = pathname === "/profile";
-  const isAuthPage = pathname === "/signin" || pathname === "/signup";
+  const isHeaderHidden =
+    pathname === "/signin" || pathname === "/signup" || pathname === "/404";
 
   const isAuth = isMovies || isSavedMovies || isProfile;
   const footerSection = isMain || isMovies || isSavedMovies;
@@ -27,7 +28,7 @@ function App() {
   return (
     <CurrentUserContext.Provider value={{}}>
       <>
-        {!isAuthPage && <Header isAuth={isAuth} />}
+        {!isHeaderHidden && <Header isAuth={isAuth} />}
         <main>
           <Routes>
             <Route path="/" element={<Main />} />

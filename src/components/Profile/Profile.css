@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   padding: 74px 0;
-  height: 100%;
 }
 
 .profile__title {
@@ -98,10 +97,9 @@
 
 @media (max-width: 500px) {
   .profile {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 68px;
-    min-height: 100vh;
+    padding: 68px 30px 30px;
+    height: calc(100vh - 74px);
+    box-sizing: border-box;
   }
 
   .profile__title {
@@ -110,7 +108,6 @@
   .profile__buttons {
     padding-top: 0px;
     padding-bottom: 10px;
-    flex-grow: 10;
   }
 
   .profile__button {
@@ -118,5 +115,6 @@
   }
   .profile__content {
     justify-content: space-between;
+    height: 100%;
   }
 }

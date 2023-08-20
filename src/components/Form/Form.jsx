@@ -1,7 +1,7 @@
 import React from "react";
 import "./Form.css";
 
-const Form = ({ children, spanText, spanPatch, spanLink }) => {
+const Form = ({ children }) => {
   return <form className="form">{children}</form>;
 };
 

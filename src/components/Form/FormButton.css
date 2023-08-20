@@ -21,7 +21,7 @@
 
 @media (max-width: 500px) {
   .form__button {
-    margin-top: 214px;
+    margin-top: 0;
     font-size: 12px;
   }
 }

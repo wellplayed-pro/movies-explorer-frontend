@@ -8,27 +8,31 @@ const Login = () => {
   return (
     <AuthLayout title="Рады видеть!">
       <Form>
-        <FormInput
-          inputId="email"
-          labelText="E-mail"
-          inputType="email"
-          required
-          placeholder="Укажите почту"
-        ></FormInput>
-        <FormInput
-          inputId="password"
-          labelText="Пароль"
-          placeholder="Придумайте пароль"
-          inputType="password"
-          errorText="Что-то пошло не так..."
-        ></FormInput>
+        <div className="form__fields">
+          <FormInput
+            inputId="email"
+            labelText="E-mail"
+            inputType="email"
+            required
+            placeholder="Укажите почту"
+          ></FormInput>
+          <FormInput
+            inputId="password"
+            labelText="Пароль"
+            placeholder="Придумайте пароль"
+            inputType="password"
+            errorText="Что-то пошло не так..."
+          ></FormInput>
+        </div>
 
-        <FormButton text="Войти"></FormButton>
-        <AuthSubAction
-          spanText="Еще не зарегистрированы?"
-          spanPatch="/signup"
-          spanLink="Регистрация"
-        ></AuthSubAction>
+        <div className="form__actions">
+          <FormButton text="Войти"></FormButton>
+          <AuthSubAction
+            spanText="Еще не зарегистрированы?"
+            spanPatch="/signup"
+            spanLink="Регистрация"
+          ></AuthSubAction>
+        </div>
       </Form>
     </AuthLayout>
   );
