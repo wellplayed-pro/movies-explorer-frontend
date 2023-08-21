@@ -11,10 +11,11 @@ import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import Profile from "../Profile/Profile";
 import Header from "../Header/Header";
+import { Helmet } from "react-helmet";
 
 function App() {
   const { pathname } = useLocation();
-
+  <Helmet htmlAttributes={{ lang : 'ru' }}/>
   const isMain = pathname === "/";
   const isMovies = pathname === "/movies";
   const isSavedMovies = pathname === "/saved-movies";
