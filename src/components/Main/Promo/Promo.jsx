@@ -15,7 +15,7 @@ const Promo = () => {
             Листайте ниже, чтобы узнать больше про этот проект и его создателя.
           </p>
           <Link
-            className="promo__link"
+            className="link promo__link"
             to="about-project"
             smooth={true}
             duration={300}

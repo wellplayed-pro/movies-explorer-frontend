@@ -4,7 +4,7 @@ import "./ProfileBtn.css";
 
 const ProfileBtn = ({ className }) => {
   return (
-    <Link className={`profile-btn ${className}`} to="/profile">
+    <Link className={`btn profile-btn ${className}`} to="/profile">
       <div className="profile-btn__text">Аккаунт</div>
       <div className="profile-btn__box">
         <img

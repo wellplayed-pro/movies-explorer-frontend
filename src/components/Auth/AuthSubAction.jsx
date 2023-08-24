@@ -7,7 +7,7 @@ const AuthSubAction = ({ spanText, spanPatch, spanLink }) => {
     <div className="auth-sub-action">
       <span className="auth-sub-action__span">
         {spanText}
-        <Link className="auth-sub-action__link" to={spanPatch}>
+        <Link className="link auth-sub-action__link" to={spanPatch}>
           {spanLink}
         </Link>
       </span>

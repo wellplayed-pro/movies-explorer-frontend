@@ -9,7 +9,7 @@ const NavigationProfile = () => {
       <nav className="nav__links">
         <NavLink
           className={({ isActive }) =>
-            `nav__link ${isActive ? "nav__link-active" : ""}`
+            `link nav__link ${isActive ? "link nav__link-active" : ""}`
           }
           to="/movies"
         >
@@ -18,7 +18,7 @@ const NavigationProfile = () => {
 
         <NavLink
           className={({ isActive }) =>
-            `nav__link ${isActive ? "nav__link-active" : ""}`
+            `link nav__link ${isActive ? "link nav__link-active" : ""}`
           }
           to="/saved-movies"
         >

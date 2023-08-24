@@ -30,11 +30,6 @@
   border: none;
 }
 
-.movies-list__more-btn:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
-
 @media (max-width: 800px) {
   .movies-list__list {
     padding-top: 130px;

@@ -28,16 +28,10 @@
   color: #3456f3;
   font-size: 14px;
   line-height: 17px;
-  text-decoration: none;
-  transition: opacity 0.2s linear;
   background-color: transparent;
   border: none;
 }
 
-.not-found__link:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
 @media screen and (max-width: 800px) {
   .not-found {
     padding: 408px 0 222px;

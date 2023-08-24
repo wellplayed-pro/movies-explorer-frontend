@@ -23,10 +23,6 @@
   padding: 7px 10px;
 }
 
-.search-form__btn:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
 .search-form__input {
   color: #a0a0a0;
   font-feature-settings: "clig" off, "liga" off;
@@ -36,7 +32,6 @@
   font-weight: 500;
   line-height: normal;
   width: 100%;
-
   background: none;
   border: none;
   padding: 0;

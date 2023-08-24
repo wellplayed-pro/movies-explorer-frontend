@@ -20,7 +20,7 @@ const AboutMe = () => {
             заниматься фриланс-заказами и ушёл с постоянной работы.
           </p>
           <Link
-            className="about-me__link"
+            className="link about-me__link"
             to={"https://github.com/wellplayed-pro"}
             target="_blank"
             rel="noreferrer"

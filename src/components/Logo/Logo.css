@@ -2,13 +2,6 @@
   display: flex;
   align-items: center;
 }
-.logo__link {
-  transition: 0.5s;
-}
-
-.logo__link:hover {
-  opacity: 0.8;
-}
 
 .logo__img {
   width: 38px;

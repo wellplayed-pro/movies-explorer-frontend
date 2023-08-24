@@ -18,9 +18,9 @@ const Profile = () => {
               <span className="profile__field-value">pochta@yandex.ru</span>
             </div>
           </div>
-          <div className="profile__buttons">
-            <button className="profile__button">Редактировать</button>
-            <button className="profile__button profile__button_red">
+          <div className="btn profile__buttons">
+            <button className="btn profile__button">Редактировать</button>
+            <button className="btn profile__button profile__button_red">
               Выйти из аккаунта
             </button>
           </div>

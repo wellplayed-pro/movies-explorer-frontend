@@ -14,10 +14,6 @@
   border-color: #3456f3;
 }
 
-.form__button:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
 
 @media (max-width: 500px) {
   .form__button {

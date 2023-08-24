@@ -14,7 +14,7 @@ const SearchForm = () => {
           type="text"
           placeholder="Фильм"
         />
-        <button className="search-form__btn" type="button">
+        <button className="btn search-form__btn" type="button">
           Найти
         </button>
       </form>

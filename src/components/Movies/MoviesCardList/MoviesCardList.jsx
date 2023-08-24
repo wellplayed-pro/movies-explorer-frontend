@@ -29,7 +29,7 @@ const MoviesCardList = ({ movies = [], isRemovable = false }) => {
       </ul>
       {isBtnShow ? (
         <div className="movies-list__more-section">
-          <button className="movies-list__more-btn">Еще</button>
+          <button className="btn movies-list__more-btn">Еще</button>
         </div>
       ) : (
         ""

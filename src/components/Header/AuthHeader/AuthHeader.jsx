@@ -8,7 +8,7 @@ const AuthHeader = () => {
     <div className="header-content">
       <Logo />
       <Navigation />
-      <ProfileBtn className="header-btn header__account-btn" />
+      <ProfileBtn className="btn header-btn header__account-btn" />
     </div>
   );
 };

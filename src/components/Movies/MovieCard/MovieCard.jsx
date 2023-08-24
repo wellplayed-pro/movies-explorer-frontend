@@ -17,7 +17,7 @@ const MovieCard = ({ movie, isRemovable = false }) => {
       <div className="movie__description">
         <h2 className="movie__name">{movie.name}</h2>
 
-        <button className="movie__btn" type="button">
+        <button className="btn movie__btn" type="button">
           <img src={currentImg} alt="like" />
         </button>
       </div>

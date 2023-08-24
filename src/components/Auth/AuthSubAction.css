@@ -16,12 +16,7 @@
   color: #3456f3;
   font-size: 14px;
   margin-left: 6px;
-  text-decoration: none;
-  transition: 0.5s;
-}
 
-.auth-sub-action__link:hover {
-  opacity: 0.8;
 }
 
 @media (max-width: 500px) {

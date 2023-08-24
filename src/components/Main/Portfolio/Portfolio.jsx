@@ -20,7 +20,7 @@ const Portfolio = () => {
         </li>
         <li className="portfolio__item">
           <Link
-            className="portfolio__link"
+            className="link portfolio__link"
             to={"https://wellplayed-pro.github.io/russian-travel/index.html"}
             target="_blank"
             rel="noreferrer"
@@ -31,12 +31,12 @@ const Portfolio = () => {
         </li>
         <li className="portfolio__item">
           <Link
-            className="portfolio__link"
+            className="link portfolio__link"
             to={"https://ambernet15pr.nomoredomains.xyz/"}
             target="_blank"
             rel="noreferrer"
           >
-            <p className="portfolio__name">Одностраничное приложение</p>
+            <p className="link portfolio__name">Одностраничное приложение</p>
             <span className="portfolio__icon"></span>
           </Link>
         </li>

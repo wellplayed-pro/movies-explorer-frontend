@@ -13,7 +13,7 @@ const NavDrawer = ({ className }) => {
     <div
       className={`nav-drawer ${isOpen ? "nav-drawer--open" : ""} ${className}`}
     >
-      <button className="nav-drawer__btn" onClick={toggle}>
+      <button className="btn nav-drawer__btn" onClick={toggle}>
         <svg
           className="nav-drawer__icon"
           width="44"
@@ -30,7 +30,7 @@ const NavDrawer = ({ className }) => {
       <div className="nav-drawer__overlay" onClick={toggle}></div>
       <div className="nav-drawer__content">
         <button
-          className="nav-drawer__btn nav-drawer__close-btn"
+          className="btn nav-drawer__btn nav-drawer__close-btn"
           onClick={toggle}
         >
           <img
@@ -43,7 +43,7 @@ const NavDrawer = ({ className }) => {
           <li className="nav-drawer__item">
             <NavLink
               className={({ isActive }) =>
-                `nav-drawer__link ${isActive ? "nav-drawer__link_active" : ""}`
+                `link nav-drawer__link ${isActive ? "link nav-drawer__link_active" : ""}`
               }
               to="/"
             >
@@ -53,7 +53,7 @@ const NavDrawer = ({ className }) => {
           <li className="nav-drawer__item">
             <NavLink
               className={({ isActive }) =>
-                `nav-drawer__link ${isActive ? "nav-drawer__link_active" : ""}`
+                `link nav-drawer__link ${isActive ? "link nav-drawer__link_active" : ""}`
               }
               to="/movies"
             >
@@ -63,7 +63,7 @@ const NavDrawer = ({ className }) => {
           <li className="nav-drawer__item">
             <NavLink
               className={({ isActive }) =>
-                `nav-drawer__link ${isActive ? "nav-drawer__link_active" : ""}`
+                `link nav-drawer__link ${isActive ? "link nav-drawer__link_active" : ""}`
               }
               to="/saved-movies"
             >
@@ -71,7 +71,7 @@ const NavDrawer = ({ className }) => {
             </NavLink>
           </li>
         </ul>
-        <ProfileBtn className="nav-drawer__profile-btn" />
+        <ProfileBtn className="btn nav-drawer__profile-btn" />
       </div>
     </div>
   );
