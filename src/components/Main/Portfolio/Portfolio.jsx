@@ -9,7 +9,7 @@ const Portfolio = () => {
       <ul className="portfolio__list">
         <li className="portfolio__item">
           <Link
-            className="portfolio__link"
+            className="link portfolio__link"
             to={"https://github.com/wellplayed-pro/how-to-learn"}
             target="_blank"
             rel="noreferrer"

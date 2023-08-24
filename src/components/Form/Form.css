@@ -1,8 +1,0 @@
-.form {
-  width: 100%;
-  box-sizing: border-box;
-  display: inline-flex;
-  justify-content: space-between;
-  flex-direction: column;
-  flex-grow: 1;
-}

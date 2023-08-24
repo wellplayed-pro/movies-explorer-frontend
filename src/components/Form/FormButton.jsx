@@ -3,7 +3,7 @@ import "./FormButton.css";
 
 const FormButton = ({ text, type = "submit" }) => {
   return (
-    <button className="btn form__button" type={type}>
+    <button className="btn form-btn" type={type}>
       {text}
     </button>
   );

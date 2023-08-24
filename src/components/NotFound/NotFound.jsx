@@ -8,6 +8,7 @@ const NotFound = () => {
     <section className="not-found">
       <h1 className="not-found__title">404</h1>
       <p className="not-found__text">Страница не найдена</p>
+      <div className="not-found__spacer"></div>
       <button
         className="link not-found__link"
         onClick={() => navigate(-1)}

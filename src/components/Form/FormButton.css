@@ -1,4 +1,4 @@
-.form__button {
+.form-btn {
   width: 100%;
   border-radius: 3px;
   background: #3456f3;
@@ -14,14 +14,13 @@
   border-color: #3456f3;
 }
 
-
 @media (max-width: 500px) {
-  .form__button {
+  .form-btn {
     font-size: 12px;
   }
 }
 @media (max-height: 700px) {
-  .form__button {
+  .form-btn {
     margin-top: 0;
   }
 }
