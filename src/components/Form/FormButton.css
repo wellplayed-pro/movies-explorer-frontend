@@ -1,0 +1,26 @@
+.form-btn {
+  width: 100%;
+  border-radius: 3px;
+  background: #3456f3;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  margin: 124px 0 16px;
+  transition: 0.5s;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border-color: #3456f3;
+}
+
+@media (max-width: 500px) {
+  .form-btn {
+    font-size: 12px;
+  }
+}
+@media (max-height: 700px) {
+  .form-btn {
+    margin-top: 0;
+  }
+}

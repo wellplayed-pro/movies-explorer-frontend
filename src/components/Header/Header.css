@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 17px 70px;
+  color: black;
+  height: 74px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.header_promo {
+  background-color: #073042;
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  width: 100%;
+}
+
+.header_promo .header-btn {
+  background-color: #2be080;
+  color: #000;
+}
+
+.header_promo .header-icon {
+  fill: white;
+}
+
+@media (max-width: 780px) {
+  .header {
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 18px 14px;
+  }
+}

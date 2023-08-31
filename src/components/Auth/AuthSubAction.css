@@ -1,0 +1,29 @@
+.auth-sub-action {
+  display: flex;
+  justify-content: center;
+
+  font-weight: 400;
+  line-height: normal;
+}
+
+.auth-sub-action__span {
+  color: #8b8b8b;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-sub-action__link {
+  color: #3456f3;
+  font-size: 14px;
+  margin-left: 6px;
+
+}
+
+@media (max-width: 500px) {
+  .auth-sub-action__span {
+    font-size: 12px;
+  }
+  .auth-sub-action__link {
+    font-size: 12px;
+  }
+}

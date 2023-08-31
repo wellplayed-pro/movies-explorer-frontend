@@ -1,0 +1,17 @@
+.main-section-title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #000;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .main-section-title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    padding-bottom: 28px;
+  }
+}
