@@ -2,7 +2,7 @@ import AuthLayout from "../Auth/AuthLayout";
 import FormButton from "../Form/FormButton";
 import AuthSubAction from "../Auth/AuthSubAction";
 import FormInput from "../Form/FormInput";
-import useValidate from '../../hooks/useValidate';
+import useValidate from '../../utils/useValidate';
 const Content = () => (
   <>
     <FormInput
