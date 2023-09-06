@@ -14,6 +14,15 @@
   border-color: #3456f3;
 }
 
+.form-btn_disabled {
+  opacity: 0.2;
+}
+
+.form-btn_disabled:hover {
+  cursor: not-allowed;
+  opacity: 0.2;
+}
+
 @media (max-width: 500px) {
   .form-btn {
     font-size: 12px;

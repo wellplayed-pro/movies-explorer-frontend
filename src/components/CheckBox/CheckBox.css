@@ -2,7 +2,7 @@
   display: flex;
   align-self: center;
   align-items: center;
-  margin-top: 27px;
+  margin-top: 16px;
   gap: 14px;
 }
 
@@ -15,7 +15,7 @@
 
 .checkbox__input {
   width: 36px;
-  height: 20px;
+  height: 15px;
   display: inline-block;
   outline: none;
   -webkit-appearance: none;
@@ -29,11 +29,13 @@
   position: absolute;
   height: 8px;
   width: 8px;
-  top: 6px;
+  top: 3px;
   left: 7px;
   border-radius: 50%;
   content: "";
   background-color: #a0a0a0;
+  transform: translate(0px);
+  transition: 0.3s ease;
 }
 
 .checkbox__input:checked {
@@ -41,7 +43,7 @@
 }
 
 .checkbox__input:checked::after {
-  top: 6px;
+  top: 3px;
   right: 8px;
   position: absolute;
   height: 8px;

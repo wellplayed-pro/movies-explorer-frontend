@@ -10,6 +10,10 @@
   border-bottom: 1px solid #3456f3;
 }
 
+.search-form__form_errored {
+  border-bottom: 1px solid red;
+}
+
 .search-form__btn {
   border-radius: 48px;
   background: #3456f3;
@@ -36,6 +40,12 @@
   border: none;
   padding: 0;
   outline: inherit;
+}
+
+.search-form__error {
+  color: red;
+  height: 16px;
+  min-width: 16px;
 }
 
 .search-form__subaction {

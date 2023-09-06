@@ -1,21 +1,23 @@
-import { MOVIES_SERVER_URL, BASE_URL } from './config';
+import { MOVIES_SERVER_URL, API_URL } from './config';
 
 // ответ сервера при ошибке
-const handleResponse = (res) => {
-    if(res.ok){
+const handleResponse = async (res) => {
+    if (res.ok) {
         return res.json();
     }
-    return Promise.reject(`Ошибка: ${res.status}`);
+    const { message: errorMessage } = await res.json();
+    if (errorMessage)
+        return Promise.reject(errorMessage ? errorMessage : `Ошибка: ${res.status}`);
 }
 
 // регистрация
-export const register = ({name, email, password}) => {
-    return fetch(`${BASE_URL}/signup`, {
+export const register = ({ name, email, password }) => {
+    return fetch(`${API_URL}/signup`, {
         method: "POST",
         credentials: "include",
         headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Accept": "application/json",
         },
         body: JSON.stringify({
             "name": name,
@@ -23,12 +25,12 @@ export const register = ({name, email, password}) => {
             "password": password,
         }),
     })
-    .then(response => handleResponse(response));
+        .then(response => handleResponse(response));
 }
 
 // логин
-export const login = ({email, password}) => {
-    return fetch(`${BASE_URL}/signin`, {
+export const login = ({ email, password }) => {
+    return fetch(`${API_URL}/signin`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -40,29 +42,29 @@ export const login = ({email, password}) => {
             "email": email,
         }),
     })
-    .then(response => handleResponse(response));
+        .then(response => handleResponse(response));
 }
 
 // редактирование профиля
-export const setProfile = ({name, email}) => {
-    return fetch(`${BASE_URL}/users/me`, {
+export const setProfile = ({ name, email }) => {
+    return fetch(`${API_URL}/users/me`, {
         method: 'PATCH',
-            credentials: "include",
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-            })
+        credentials: "include",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email,
+        })
     })
-    .then(response => handleResponse(response));
+        .then(response => handleResponse(response));
 }
 
 // проверка профиля
 export const getUser = () => {
-    return fetch(`${BASE_URL}/users/me`, {
+    return fetch(`${API_URL}/users/me`, {
         method: "GET",
         credentials: "include",
         headers: {
@@ -70,40 +72,27 @@ export const getUser = () => {
             "Accept": "application/json",
         },
     })
-    .then(response => handleResponse(response));
-}
-
-// проверка профиля
-export const checkToken = () => {
-    return fetch(`${BASE_URL}/users/me`, {
-        method: "GET",
-        credentials: "include",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        },
-    })
-    .then(response => handleResponse(response));
+        .then(response => handleResponse(response));
 }
 
 // логаут из профиля
 export const signOut = () => {
-  return fetch(`${BASE_URL}/logout`, {
-      method: "GET",
-      credentials: "include",
-      headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-      }, 
-  })
-  .then(response => handleResponse(response));
+    return fetch(`${API_URL}/signout`, {
+        method: "POST",
+        credentials: "include",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+    })
+        .then(response => handleResponse(response));
 
 }
 
 // сохранение фильма
 export const saveMovie = (movie) => {
-    
-    return fetch(`${BASE_URL}/movies`, {
+
+    return fetch(`${API_URL}/movies`, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -116,20 +105,20 @@ export const saveMovie = (movie) => {
             duration: movie.duration,
             year: movie.year,
             description: movie.description,
-            image: MOVIES_SERVER_URL+movie.image.url,
-            trailerLink: movie.trailerLink || MOVIES_SERVER_URL+movie.image.url,
-            thumbnail: MOVIES_SERVER_URL+movie.image.url,
+            image: MOVIES_SERVER_URL + movie.image.url,
+            trailerLink: movie.trailerLink || MOVIES_SERVER_URL + movie.image.url,
+            thumbnail: MOVIES_SERVER_URL + movie.image.url,
             movieId: +movie.id,
             nameRU: movie.nameRU || movie.nameEN,
             nameEN: movie.nameEN || movie.nameRU,
         }),
     })
-    .then(response => handleResponse(response));  
+        .then(response => handleResponse(response));
 }
 
 // получение сохраненных фильмов
 export const getMoviesSaved = () => {
-    return fetch(`${BASE_URL}/movies`, {
+    return fetch(`${API_URL}/movies`, {
         method: "GET",
         credentials: "include",
         headers: {
@@ -137,12 +126,12 @@ export const getMoviesSaved = () => {
             "Accept": "application/json",
         },
     })
-    .then(response => handleResponse(response));
+        .then(response => handleResponse(response));
 }
 
 // удаление сохраненного фильма
 export const deleteMovieSaved = (movieId) => {
-    return fetch(`${BASE_URL}/movies/${movieId}`, {
+    return fetch(`${API_URL}/movies/${movieId}`, {
         method: "DELETE",
         credentials: "include",
         headers: {
@@ -150,5 +139,5 @@ export const deleteMovieSaved = (movieId) => {
             "Accept": "application/json",
         },
     })
-    .then(response => handleResponse(response));
-  }
+        .then(response => handleResponse(response));
+}

@@ -1,9 +1,13 @@
 import React from "react";
 import "./FormButton.css";
 
-const FormButton = ({ text, type = "submit" }) => {
+const FormButton = ({ text, disabled, type = "submit" }) => {
   return (
-    <button className="btn form-btn" type={type}>
+    <button
+      className={`btn form-btn ${disabled ? "form-btn_disabled" : ""}`}
+      disabled={disabled}
+      type={type}
+    >
       {text}
     </button>
   );
