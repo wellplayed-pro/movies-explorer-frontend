@@ -5,6 +5,7 @@ import "../Movies/Movies.css";
 import Page from "../Page/Page";
 import { useSavedMovies } from "../../utils/useSavedMovies";
 import DeleteBtn from "./deleteBtn";
+import { SHORT_FILM_DURATION } from "../../utils/config";
 
 const Movies = () => {
   const { savedMovies, fetchSavedMovies } = useSavedMovies();
@@ -35,7 +36,9 @@ const Movies = () => {
                 searchIn(movie.nameEn, keyword)
             )
         )
-        .filter((movie) => (isShortFilmFilter ? movie.duration <= 40 : true)),
+        .filter((movie) =>
+          isShortFilmFilter ? movie.duration <= SHORT_FILM_DURATION : true
+        ),
     [keywords, isShortFilmFilter, savedMovies]
   );
 

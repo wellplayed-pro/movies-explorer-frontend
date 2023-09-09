@@ -2,6 +2,11 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import "./MoviesCardList.css";
 import MovieCard from "../MovieCard/MovieCard";
+import {
+  ADDITIONAL_MOVIES_COUNT,
+  BREAKPOINTS,
+  START_MOVIES_COUNT,
+} from "../../../utils/config";
 
 function MoviesCardList({ actionBtn, alwaysShowAll = false, ...props }) {
   const location = useLocation();
@@ -18,15 +23,15 @@ function MoviesCardList({ actionBtn, alwaysShowAll = false, ...props }) {
 
   function handleMoviesCount() {
     if (alwaysShowAll) return setMoviesCount(10000);
-    if (document.documentElement.clientWidth > 800) {
-      setMoviesCount(16);
-      setAdditionMovies(4);
-    } else if (document.documentElement.clientWidth > 500) {
-      setMoviesCount(8);
-      setAdditionMovies(2);
+    if (document.documentElement.clientWidth > BREAKPOINTS.laptop) {
+      setMoviesCount(START_MOVIES_COUNT.laptop);
+      setAdditionMovies(ADDITIONAL_MOVIES_COUNT.laptop);
+    } else if (document.documentElement.clientWidth > BREAKPOINTS.tablet) {
+      setMoviesCount(START_MOVIES_COUNT.tablet);
+      setAdditionMovies(ADDITIONAL_MOVIES_COUNT.tablet);
     } else {
-      setMoviesCount(5);
-      setAdditionMovies(2);
+      setMoviesCount(START_MOVIES_COUNT.mobile);
+      setAdditionMovies(ADDITIONAL_MOVIES_COUNT.mobile);
     }
   }
 

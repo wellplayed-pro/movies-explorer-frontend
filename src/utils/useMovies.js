@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getMovies } from "./MoviesApi"
+import { SHORT_FILM_DURATION } from "./config";
 
 class ArrayLocalStorage {
   constructor(local_storage_key) {
@@ -91,7 +92,7 @@ export const useMovies = () => {
         (keyword) =>
           searchIn(movie.nameRU, keyword) || searchIn(movie.nameEn, keyword)
       ))
-      .filter(movie => isShortFilmFilter ? movie.duration <= 40 : true)
+      .filter(movie => isShortFilmFilter ? movie.duration <= SHORT_FILM_DURATION : true)
 
     setMovies(filteredMovies)
     if (filteredMovies.length === 0) {

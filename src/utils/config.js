@@ -15,3 +15,22 @@ export const DURATION_LENGTH = 40;
 
 export const PAGE_WITHOUT_AUTH = ["/sign-in", "/sign-up"];
 export const MOVIES_URL = 'https://api.nomoreparties.co/beatfilm-movies';
+
+export const SHORT_FILM_DURATION = 40;
+export const BREAKPOINTS = {
+  tablet: 500,
+  laptop: 800
+}
+
+export const START_MOVIES_COUNT = {
+  laptop: 16,
+  tablet: 8,
+  mobile: 5
+}
+
+export const ADDITIONAL_MOVIES_COUNT = {
+  laptop: 4,
+  tablet: 2,
+  mobile: 2
+
+}
