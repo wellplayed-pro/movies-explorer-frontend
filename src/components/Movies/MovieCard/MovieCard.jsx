@@ -34,13 +34,15 @@ const MovieCard = ({ movie, actionBtn: ActionBtn, onDelete }) => {
   const time = formatTime(movie.duration);
   return (
     <li className="movie">
-      <img className="movie__image" src={image} alt={name} />
-      <div className="movie__description">
-        <h2 className="movie__name">{name}</h2>
+      <a href={movie.trailerLink} className="movie__link">
+        <img className="movie__image" src={image} alt={name} />
+        <div className="movie__description">
+          <h2 className="movie__name">{name}</h2>
 
-        {<ActionBtn {...movie} onDelete={onDelete} />}
-      </div>
-      <p className="movie__time">{time}</p>
+          {<ActionBtn {...movie} onDelete={onDelete} />}
+        </div>
+        <p className="movie__time">{time}</p>
+      </a>
     </li>
   );
 };

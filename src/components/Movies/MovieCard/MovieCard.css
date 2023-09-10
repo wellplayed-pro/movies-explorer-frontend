@@ -19,6 +19,11 @@
   height: 46px;
 }
 
+.movie__link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .movie__time {
   color: #a0a0a0;
   font-size: 11px;

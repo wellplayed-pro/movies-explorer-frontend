@@ -11,15 +11,18 @@ const Btn = ({ isLiked, onDelete, ...movie }) => {
 
   const [loading, setLoading] = useState(false);
 
-  const onClick = async () => {
+  const onClick = async (evt) => {
+    evt?.preventDefault();
     if (loading) return;
     setLoading(true);
 
-    if (isLiked) {
-      await deleteMovieSaved(movie._id);
-    } else {
-      await saveMovie(movie);
-    }
+    try {
+      if (isLiked) {
+        await deleteMovieSaved(movie._id);
+      } else {
+        await saveMovie(movie);
+      }
+    } catch {}
     onDelete();
     setLoading(false);
   };

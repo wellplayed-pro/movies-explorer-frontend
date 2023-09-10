@@ -5,7 +5,8 @@ import unlike from "../../images/unlike.svg";
 const DeleteBtn = ({ onDelete, ...movie }) => {
   const [loading, setLoading] = useState(false);
 
-  const onClick = async () => {
+  const onClick = async (evt) => {
+    evt?.preventDefault();
     if (loading) return;
     setLoading(true);
 
