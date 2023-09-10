@@ -16,7 +16,7 @@ const UnauthHeader = () => {
         </Link>
         <Link
           className="unauth-header__link unauth-header__link-enter header-btn"
-          to="/signup"
+          to="/signin"
           tabIndex={1}
         >
           Войти

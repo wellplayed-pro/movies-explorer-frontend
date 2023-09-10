@@ -3,3 +3,7 @@
     display: none;
   }
 }
+
+.header__account-btn {
+  text-decoration: none;
+}

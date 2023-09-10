@@ -2,7 +2,12 @@ import AuthLayout from "../Auth/AuthLayout";
 import FormButton from "../Form/FormButton";
 import AuthSubAction from "../Auth/AuthSubAction";
 import FormInput from "../Form/FormInput";
-const Content = () => (
+import { useFormValidation } from "../../utils/useFormValidator";
+import { validationRules } from "../../utils/ValidationRules";
+import { useContext } from "react";
+import { CurrentUserContext } from "../../utils/CurrentUserContext";
+
+const Content = ({ handleChange, errors }) => (
   <>
     <FormInput
       inputId="email"
@@ -10,13 +15,18 @@ const Content = () => (
       inputType="email"
       required
       placeholder="Укажите почту"
+      name="email"
+      errorText={errors["email"]?.[0]}
+      onChange={handleChange}
     ></FormInput>
     <FormInput
       inputId="password"
       labelText="Пароль"
       placeholder="Придумайте пароль"
       inputType="password"
-      errorText="Что-то пошло не так..."
+      name="password"
+      errorText={errors["password"]?.[0]}
+      onChange={handleChange}
     ></FormInput>
   </>
 );
@@ -33,11 +43,33 @@ const Bottom = () => (
 );
 
 const Login = () => {
+  const { signIn } = useContext(CurrentUserContext);
+
+  const { formData, errors, handleChange, isFormValid, setError } =
+    useFormValidation(
+      {
+        email: "",
+        password: "",
+      },
+      { name: validationRules.name, password: validationRules.password }
+    );
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!isFormValid) {
+      return;
+    }
+    try {
+      await signIn(formData);
+    } catch (err) {
+      setError("email", err);
+    }
+  };
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <AuthLayout
         title="Рады видеть!"
-        content={<Content />}
+        content={<Content errors={errors} handleChange={handleChange} />}
         bottom={<Bottom />}
       ></AuthLayout>
     </form>

@@ -1,27 +1,53 @@
 import "./MovieCard.css";
-import liked from "../../../images/liked.svg";
-import notLiked from "../../../images/notLiked.svg";
-import unlike from "../../../images/unlike.svg";
-import { useMemo } from "react";
+function formatTime(minutes) {
+  const hours = Math.floor(minutes / 60);
+  const minRemaining = minutes % 60;
 
-const MovieCard = ({ movie, isRemovable = false }) => {
-  const currentImg = useMemo(() => {
-    if (isRemovable) return unlike;
-    if (movie.isLiked) return liked;
-    return notLiked;
-  }, [movie.isLiked, isRemovable]);
+  let hourText = "час";
+  if (hours !== 1 && hours !== 21) {
+    hourText = "часа";
+  } else if ((hours >= 2 && hours <= 4) || (hours >= 22 && hours <= 24)) {
+    hourText = "часов";
+  }
 
+  let minText = "минута";
+  if (minRemaining !== 1 && minRemaining !== 21) {
+    minText = "минуты";
+  } else if (
+    (minRemaining >= 2 && minRemaining <= 4) ||
+    (minRemaining >= 22 && minRemaining <= 24)
+  ) {
+    minText = "минут";
+  }
+
+  if (hours === 0) return `${minRemaining} ${minText}`;
+
+  return `${hours} ${hourText} ${minRemaining} ${minText}`;
+}
+
+const MovieCard = ({ movie, actionBtn: ActionBtn, likeMovie, unlikeMovie }) => {
+  const image = movie.image?.url
+    ? "https://api.nomoreparties.co" + movie.image.url
+    : movie.image;
+
+  const name = movie.nameRU;
+  const time = formatTime(movie.duration);
   return (
     <li className="movie">
-      <img className="movie__image" src={movie.image} alt={movie.name} />
-      <div className="movie__description">
-        <h2 className="movie__name">{movie.name}</h2>
-
-        <button className="btn movie__btn" type="button">
-          <img src={currentImg} alt="like" />
-        </button>
-      </div>
-      <p className="movie__time">{movie.time}</p>
+      <a href={movie.trailerLink} className="movie__link">
+        <img className="movie__image" src={image} alt={name} />
+        <div className="movie__description">
+          <h2 className="movie__name">{name}</h2>
+          {
+            <ActionBtn
+              {...movie}
+              likeMovie={likeMovie}
+              unlikeMovie={unlikeMovie}
+            />
+          }
+        </div>
+        <p className="movie__time">{time}</p>
+      </a>
     </li>
   );
 };
