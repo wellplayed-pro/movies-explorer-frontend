@@ -41,14 +41,14 @@ const Profile = () => {
 
     try {
       await update(formData);
-    } catch {
-      setError(true);
-    } finally {
-      setLoading(false);
       setSuccess(true);
       setTimeout(() => {
         setSuccess(false);
       }, 1500);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
     }
   };
 
