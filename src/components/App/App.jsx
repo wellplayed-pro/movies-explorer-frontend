@@ -13,6 +13,7 @@ import Profile from "../Profile/Profile";
 import Header from "../Header/Header";
 import { Helmet } from "react-helmet";
 import ProtectedRoute from "../ProtectedRoute";
+import OnlyForUnauthRoute from "../UnauthRoute";
 
 function App() {
   const { pathname } = useLocation();
@@ -32,8 +33,14 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/signup" element={<Register />} />
-          <Route path="/signin" element={<Login />} />
+          <Route
+            path="/signup"
+            element={<OnlyForUnauthRoute element={<Register />} />}
+          />
+          <Route
+            path="/signin"
+            element={<OnlyForUnauthRoute element={<Login />} />}
+          />
           <Route path="*" element={<NotFound />} />
           <Route
             path="/movies"
