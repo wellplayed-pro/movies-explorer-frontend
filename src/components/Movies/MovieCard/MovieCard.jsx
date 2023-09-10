@@ -25,7 +25,7 @@ function formatTime(minutes) {
   return `${hours} ${hourText} ${minRemaining} ${minText}`;
 }
 
-const MovieCard = ({ movie, actionBtn: ActionBtn, onDelete }) => {
+const MovieCard = ({ movie, actionBtn: ActionBtn, likeMovie, unlikeMovie }) => {
   const image = movie.image?.url
     ? "https://api.nomoreparties.co" + movie.image.url
     : movie.image;
@@ -38,8 +38,13 @@ const MovieCard = ({ movie, actionBtn: ActionBtn, onDelete }) => {
         <img className="movie__image" src={image} alt={name} />
         <div className="movie__description">
           <h2 className="movie__name">{name}</h2>
-
-          {<ActionBtn {...movie} onDelete={onDelete} />}
+          {
+            <ActionBtn
+              {...movie}
+              likeMovie={likeMovie}
+              unlikeMovie={unlikeMovie}
+            />
+          }
         </div>
         <p className="movie__time">{time}</p>
       </a>

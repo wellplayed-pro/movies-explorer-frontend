@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { deleteMovieSaved } from "../../utils/MainApi";
 import unlike from "../../images/unlike.svg";
 
-const DeleteBtn = ({ onDelete, ...movie }) => {
+const DeleteBtn = ({ unlikeMovie, ...movie }) => {
   const [loading, setLoading] = useState(false);
 
   const onClick = async (evt) => {
@@ -10,9 +9,8 @@ const DeleteBtn = ({ onDelete, ...movie }) => {
     if (loading) return;
     setLoading(true);
 
-    await deleteMovieSaved(movie._id);
+    await unlikeMovie(movie._id);
     setLoading(false);
-    if (onDelete) onDelete();
   };
 
   return (

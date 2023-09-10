@@ -80,7 +80,7 @@ function MoviesCardList({ actionBtn, alwaysShowAll = false, ...props }) {
           visibleMovies.map((movie) => {
             return (
               <MovieCard
-                key={movie._id ?? movie.name}
+                key={movie._id ?? movie.nameRU}
                 movie={movie}
                 isLiked={props.isLiked}
                 storedMovies={props.storedMovies}
@@ -93,6 +93,7 @@ function MoviesCardList({ actionBtn, alwaysShowAll = false, ...props }) {
                 handleMovieLike={props.handleMovieLike}
                 onGetMovies={props.onGetMovies}
                 actionBtn={actionBtn}
+                unlikeMovie={props.unlikeMovie}
               />
             );
           })}

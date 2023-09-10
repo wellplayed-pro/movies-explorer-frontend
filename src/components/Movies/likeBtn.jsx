@@ -1,9 +1,18 @@
-import { useMemo, useState } from "react";
-import { saveMovie, deleteMovieSaved } from "../../utils/MainApi";
+import { useContext, useMemo, useState } from "react";
 import liked from "../../images/liked.svg";
 import notLiked from "../../images/notLiked.svg";
+import { SavedMoviesContext } from "../../utils/savedMoviesContext";
 
-const Btn = ({ isLiked, onDelete, ...movie }) => {
+const Btn = ({ ...movie }) => {
+  const { savedMovies, likeMovie, unlikeMovieById } =
+    useContext(SavedMoviesContext);
+
+  const savedMovie = useMemo(() => {
+    return savedMovies.find((sm) => sm.nameRU === movie.nameRU);
+  }, [savedMovies, movie]);
+
+  const isLiked = useMemo(() => savedMovie !== undefined, [savedMovie]);
+
   const currentImg = useMemo(() => {
     if (isLiked) return liked;
     return notLiked;
@@ -18,12 +27,11 @@ const Btn = ({ isLiked, onDelete, ...movie }) => {
 
     try {
       if (isLiked) {
-        await deleteMovieSaved(movie._id);
+        await unlikeMovieById(savedMovie._id);
       } else {
-        await saveMovie(movie);
+        await likeMovie(movie);
       }
     } catch {}
-    onDelete();
     setLoading(false);
   };
 
