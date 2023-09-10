@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, useRef } from "react";
 import { getMoviesSaved, saveMovie, deleteMovieSaved } from "./MainApi";
 
 export const SavedMoviesContext = createContext();
@@ -37,7 +37,10 @@ export const SavedMoviesProvider = ({ children }) => {
     }
   };
 
+  const initialized = useRef(false);
   useEffect(() => {
+    if (initialized.current) return;
+    initialized.current = true;
     fetchSavedMovies();
   }, []);
 
